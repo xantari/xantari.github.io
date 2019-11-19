@@ -49,6 +49,7 @@
             document.getElementById('editor').value = initialValue;
 
             // Setup SimpleMDE
+			//https://www.tiny.cloud/docs/advanced/editor-control-identifiers/#toolbarcontrols
             editor = tinymce.init({
                 selector: '#editor',
                 height: config.heightInPx,
@@ -58,7 +59,7 @@
                     'searchreplace visualblocks code fullscreen',
                     'insertdatetime media table paste code help wordcount'
                 ],
-                toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+                toolbar: 'undo redo | formatselect | bold italic underline strikethrough backcolor anchor | alignleft aligncenter alignright alignjustify | nonbreaking bullist numlist checklist outdent indent | removeformat | help',
                 tinycomments_mode: 'embedded',
                 setup: function (editor) {
                     // updates Kentico Kontent element value on certain actions
